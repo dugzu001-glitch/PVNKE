@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>People’s Voice News | Kenya Breaking News Today</title>
+<meta name="description" content="People’s Voice News (PVN) delivers Kenya breaking news, politics, business, sports and civic updates.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#b30000">
+
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f4f4;margin:0}
+header{background:#b30000;color:#fff;padding:14px;text-align:center}
+.logo{display:flex;align-items:center;justify-content:center;gap:12px}
+.logo img{height:55px}
+nav{background:#111;padding:10px;text-align:center}
+nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;cursor:pointer}
+#breaking{background:#000;color:#fff;padding:8px}
+#ticker{display:inline-block;animation:scroll 30s linear infinite}
+@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+.container{max-width:950px;margin:auto;background:#fff;padding:15px}
+.news{border-bottom:1px solid #ddd;padding:18px 0}
+.news h3{margin:0 0 6px}
+.news a{color:#b30000;text-decoration:none}
+.share-btns a{margin-right:12px;font-size:14px;text-decoration:none;color:#111}
+.page{display:none}
+footer{background:#111;color:#fff;text-align:center;padding:15px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="People’s Voice News Logo">
+    <h1>People’s Voice News</h1>
+  </div>
+  <p>The People. The Truth. The Voice.</p>
+</header>
+
+<div id="breaking">
+<strong>BREAKING:</strong> <span id="ticker">Loading latest headlines…</span>
+</div>
+
+<nav>
+<a onclick="showPage('home')">Home</a>
+<a onclick="loadNews('politics')">Politics</a>
+<a onclick="loadNews('business')">Business</a>
+<a onclick="loadNews('sports')">Sports</a>
+<a onclick="showPage('video')">Videos</a>
+<a onclick="showPage('about')">About</a>
+</nav>
+
+<div class="container">
+<div id="home" class="page" style="display:block">
+<div id="news-container">Loading news…</div>
+</div>
+
+<div id="video" class="page">
+<h2>People’s Voice News – YouTube</h2>
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed?listType=user&list=ThePeoplesVoiceNews"
+allowfullscreen></iframe>
+</div>
+
+<div id="about" class="page">
+<h2>Connect With People’s Voice News</h2>
+<p>Email: peoplesvoicenewske@gmail.com</p>
+<p>WhatsApp: 0746034329</p>
+</div>
+</div>
+
+<footer>
+<p>© 2026 People’s Voice News (PVN)</p>
+</footer>
+
+<script>
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+ document.getElementById(id).style.display='block';
+}
+</script>
+</body>
+</html>
